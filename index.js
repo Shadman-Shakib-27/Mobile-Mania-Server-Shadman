@@ -25,7 +25,7 @@ async function run() {
     const db = client.db("Mobile-Mania");
     const ProductCollection = db.collection("products");
 
-    // Supply Post Related Api
+    // Post Product Related Api
 
     app.get("/api/v1/products", async (req, res) => {
       const queryUrl = req.query;
@@ -70,7 +70,9 @@ async function run() {
 
     // Start The Server
     app.listen(port, () => {
-      console.log(`Shadman's Mobile Mania Server is Running On http://localhost:${port}`);
+      console.log(
+        `Shadman's Mobile Mania Server is Running On http://localhost:${port}`
+      );
     });
   } finally {
   }
